@@ -1,0 +1,25 @@
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ---- Editor / IDE ----
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ---- PlatformIO ----
+.pio/
+.piodeps/
+.ccls-cache/
+
+# ---- Arduino build artifacts ----
+*.elf
+*.hex
+*.bin
+*.map
+
+# ---- Archivi e vari ----
+*.zip
+Thumbs.db
