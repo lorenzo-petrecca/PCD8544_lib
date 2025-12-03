@@ -152,6 +152,12 @@ public:
     void exitAction ();
     inline bool isInAction () const { return _mode == Mode::ACTION; }
 
+    // Ritorna la posizione del attuale cursore nel menu corrente
+    inline uint8_t getCursor() const { return _cursor; }
+    // Ritorna il sub-menu all'interno del quale ci si trova
+    inline const MenuItem* getCurrent() const { return _current; }
+
+
 private:
     const MenuInputPins _pins;
     const MenuItem* _current = nullptr; // elemento attuale
