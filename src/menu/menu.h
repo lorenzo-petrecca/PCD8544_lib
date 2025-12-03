@@ -101,15 +101,24 @@ public:
         if (!_current || !_current->children || !_current->childCount) return false;
         const MenuItem* selected = &_current->children[_cursor];
 
-        if (selected->children && selected->childCount > 0) { // entra nel sub-menu
+        // 1. Esegue sempre la callback se c'è
+        if (selected->onSelect) {
+            selected->onSelect();
+
+            // La callback potrebbe aver cambiato il menu corrente…
+            if (!_current || !_current->children || !_current->childCount) return false;
+            selected = &_current->children[_cursor];
+        }
+
+        // 2. Se ci sono figli, entra nel sotto-menu
+        if (selected->children && selected->childCount > 0) {
             _path[++_depth] = selected;
             _current = selected;
             _cursor = 0;
             return true;
-        } else if (selected->onSelect) {    // esegue l'azione
-            selected->onSelect();
-            return false;
         }
+
+        // 3. Nessun submenu -> solo callback
         return false;
     }
 

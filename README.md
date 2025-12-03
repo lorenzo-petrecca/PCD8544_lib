@@ -105,7 +105,7 @@ The library will show up under **File → Examples → PCD8544_lib**
 
     ```ini
     lib_deps =
-        https://github.com/lorenzo-petrecca/PCD8544_lib.git#v0.1.0
+        https://github.com/lorenzo-petrecca/PCD8544_lib.git#v0.2.0
     ```
 <br>
 
@@ -228,7 +228,7 @@ La libreria sarà disponibile sotto **File → Examples → PCD8544_lib**
 
     ```ini
     lib_deps =
-        https://github.com/lorenzo-petrecca/PCD8544_lib.git#v0.1.0
+        https://github.com/lorenzo-petrecca/PCD8544_lib.git#v0.2.0
     ```
 <br>
 
