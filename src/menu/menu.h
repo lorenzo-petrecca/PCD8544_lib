@@ -44,6 +44,10 @@ struct MenuItem {
             const MenuItem* kids = nullptr, 
             uint8_t n = 0)
         :   label(l), onSelect(fn), children(kids), childCount(n) {}
+
+    // Costruttore di default
+    MenuItem()
+        : label(nullptr), onSelect(nullptr), children(nullptr), childCount(0) {}
 };
 
 
